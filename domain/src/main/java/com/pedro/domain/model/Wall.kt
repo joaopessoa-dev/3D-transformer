@@ -5,6 +5,6 @@ data class Wall(
     val startY : Float,
     val endX : Float,
     val endY : Float,
-    val heigth : Float,
+    val height : Float,
     val thickness : Float
 )
