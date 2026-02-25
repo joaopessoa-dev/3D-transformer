@@ -1,7 +1,7 @@
 package com.pedro.render3d.ui
 
 import androidx.lifecycle.ViewModel
-import com.pedro.domain.CreateWallMeshUseCase
+import com.pedro.domain.useCase.CreateWallMeshUseCase
 import com.pedro.domain.model.Mesh3D
 import com.pedro.domain.model.Wall
 
