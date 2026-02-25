@@ -1,8 +1,9 @@
 package com.pedro.domain.model
 
 data class Mesh3D(
-    val vertices : FloatArray,
-    val indices : IntArray
+    val positions : FloatArray,
+    val normals : FloatArray,
+    val indices : ShortArray
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -10,15 +11,18 @@ data class Mesh3D(
 
         other as Mesh3D
 
-        if (!vertices.contentEquals(other.vertices)) return false
+        if (!positions.contentEquals(other.positions)) return false
+        if (!normals.contentEquals(other.normals)) return false
         if (!indices.contentEquals(other.indices)) return false
 
         return true
     }
 
     override fun hashCode(): Int {
-        var result = vertices.contentHashCode()
+        var result = positions.contentHashCode()
+        result = 31 * result + normals.contentHashCode()
         result = 31 * result + indices.contentHashCode()
         return result
     }
+
 }
