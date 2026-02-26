@@ -45,6 +45,7 @@ android {
 
 dependencies {
 
+    implementation(libs.filament.android)
     val sceneViewVersion = "2.3.3"
 
     // can use all public methods from domain

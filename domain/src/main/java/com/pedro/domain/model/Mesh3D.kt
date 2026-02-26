@@ -5,6 +5,9 @@ data class Mesh3D(
     val normals : FloatArray,
     val indices : ShortArray
 ) {
+
+    val vertexCount : Int get() = positions.size / 3
+    val triangleCount : Int get() = indices.size / 3
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
